@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preload" href="/styles/style.css" as="style" />
+        <link
+            rel="preload"
+            as="image"
+            href="/assets/white_marble_horizontal.jpg"
+        />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script src="/scripts/script.js" defer></script>
+    </head>
+    <body>
+        <div id="mouse_overlay"></div>
+
+        <nav class="back_button container">
+            <button class="standard_button">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="66"
+                    height="66"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <line x1="5" y1="12" x2="9" y2="16" />
+                    <line x1="5" y1="12" x2="9" y2="8" />
+                </svg>
+            </button>
+        </nav>
+
+        <aside class="turn_left_button container">
+            <button class="standard_button" id="turn_left">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="66"
+                    height="66"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 13l4 -4l-4 -4m4 4h-11a4 4 0 0 0 0 8h1" />
+                </svg>
+            </button>
+        </aside>
+
+        <main class="card container">
+            <div id="card">
+                <div class="card_front container">
+                    <img src="/assets/avatar.png" />
+                    <hr class="vertical_divider" />
+                    <ul>
+                        <li><span>Beau Patrick Dekker</span></li>
+
+                        <li><span>beaudekker.com</span></li>
+
+                        <li><span>beau@patrickdekker.nl</span></li>
+
+                        <li><span>+316 300 22 508</span></li>
+                    </ul>
+                </div>
+
+                <div class="card_back container">
+                    <div class="bordered_container">
+                        <!-- nickname -->
+                        <span>Beau Dekker</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="turn_left_button container">
+            <button class="standard_button" id="turn_right">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="66"
+                    height="66"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+                </svg>
+            </button>
+        </aside>
+    </body>
+</html>
