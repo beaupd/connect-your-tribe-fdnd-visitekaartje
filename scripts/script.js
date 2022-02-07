@@ -27,7 +27,9 @@ const Card = {
     update() {
         this.element.style.transform = `rotateY(${
             this.offset + this.posX
-        }deg) rotateX(${-1 * this.posY}deg)`;
+        }deg) rotateX(${
+            this.offset % 360 != 0 ? this.posY : -1 * this.posY
+        }deg)`;
         console.log(this.posX, this.posY);
     },
 };
