@@ -2,8 +2,8 @@
     --utilities: #171717;
     --content: #171717;
     --background: #cccccc;
-    /* --material: url("/assets/white_marble_horizontal.jpg"); */
-    --material: url("/assets/brush_white.jpg");
+    --material: url("/assets/white_marble_horizontal.jpg");
+    /* --material: url("/assets/brush_white.jpg"); */
     --z-offset: 5px;
     --radius: 25px;
 }
