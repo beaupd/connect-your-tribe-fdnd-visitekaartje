@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Business Card</title>
+        <title>Visite Kaartje</title>
         <link rel="preload" href="/styles/style.css" as="style" />
         <link
             rel="preload"
@@ -18,12 +18,12 @@
         <div id="mouse_overlay"></div>
 
         <nav class="back_button container">
-            <button class="standard_button">
+            <button class="standard_button" onclick="history.back()">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="icon"
-                    width="66"
-                    height="66"
+                    width="55"
+                    height="55"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke-linecap="round"
@@ -36,13 +36,38 @@
             </button>
         </nav>
 
+        <nav class="add_button container">
+            <button
+                class="standard_button"
+                onclick="location.pathname = '/form.html'"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="55"
+                    height="55"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path
+                        d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+                    />
+                    <path d="M11 14h1v4h1" />
+                    <path d="M12 11h.01" />
+                </svg>
+            </button>
+        </nav>
+
         <aside class="turn_left_button container">
             <button class="standard_button" id="turn_left">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="icon"
-                    width="66"
-                    height="66"
+                    width="55"
+                    height="55"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke-linecap="round"
@@ -84,8 +109,8 @@
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="icon"
-                    width="66"
-                    height="66"
+                    width="55"
+                    height="55"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke-linecap="round"

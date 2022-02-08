@@ -30,7 +30,7 @@ const Card = {
         }deg) rotateX(${
             this.offset % 360 != 0 ? this.posY : -1 * this.posY
         }deg)`;
-        console.log(this.posX, this.posY);
+        // console.log(this.posX, this.posY);
     },
 };
 

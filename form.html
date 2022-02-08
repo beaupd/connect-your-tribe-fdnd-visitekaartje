@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulier</title>
+        <link rel="preload" href="/styles/style.css" as="style" />
+        <link
+            rel="preload"
+            as="image"
+            href="/assets/white_marble_horizontal.jpg"
+        />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script src="/scripts/handleForm.js" defer></script>
+    </head>
+    <body>
+        <nav class="back_button container">
+            <button class="standard_button" onclick="history.back()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="66"
+                    height="66"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <line x1="5" y1="12" x2="9" y2="16" />
+                    <line x1="5" y1="12" x2="9" y2="8" />
+                </svg>
+            </button>
+        </nav>
+
+        <main class="form container">
+            <form id="form">
+                <span class="input container number"
+                    ><input type="number" placeholder="member id" name="m_id"
+                /></span>
+                <span class="input container squad"
+                    ><input type="text" placeholder="squad id" name="squad"
+                /></span>
+                <span class="input container type">
+                    <select name="type" name="type">
+                        <option value="student">Student</option>
+                    </select>
+                </span>
+                <span class="input container nickname"
+                    ><input type="text" placeholder="nickname" name="nickname"
+                /></span>
+                <span class="input container name"
+                    ><input type="text" placeholder="name" name="name"
+                /></span>
+                <span class="input container prefix"
+                    ><input type="text" placeholder="prefix" name="prefix"
+                /></span>
+                <span class="input container surname"
+                    ><input type="text" placeholder="surname" name="surname"
+                /></span>
+                <span class="input container avatar"
+                    ><input type="url" placeholder="avatar link" name="avatar"
+                /></span>
+                <span class="input container github"
+                    ><input
+                        type="text"
+                        placeholder="github handle"
+                        name="github"
+                /></span>
+                <span class="input container bio"
+                    ><input type="text" placeholder="bio" name="bio"
+                /></span>
+                <span class="input container url"
+                    ><input type="url" placeholder="url" name="url"
+                /></span>
+                <span class="input container submit">
+                    <input type="submit" class="input submit" name="submit" />
+                </span>
+            </form>
+        </main>
+    </body>
+</html>
