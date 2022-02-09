@@ -1,7 +1,7 @@
 :root {
     --utilities: #171717;
     --content: #171717;
-    --background: #cccccc;
+    --background: url("../assets/floor_background.jpg");
     --material-color: #c4c4c4;
     --material: url("../assets/white_marble_horizontal.jpg");
     /* --material: url("/assets/brush_white.jpg"); */
@@ -29,6 +29,7 @@
 
 body {
     background: var(--background);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +168,7 @@ a.standard_button:hover svg {
     transform-style: preserve-3d;
     color: var(--content);
     box-shadow: 0 -20px 80px 0 rgba(255, 255, 255, 0.6) inset,
-        0 5px 4px 0 rgba(0, 0, 0, 0.25);
+        0 6px 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .card_front.container {
@@ -299,8 +300,8 @@ a.standard_button:hover svg {
     background: var(--material);
     padding: 60px 0;
     border-radius: calc(2 * var(--radius));
-    box-shadow: 0 -20px 80px 0 rgb(255 255 255 / 60%) inset,
-        0 5px 4px 0 rgb(0 0 0 / 25%);
+    box-shadow: 0 -20px 80px 0 rgba(255, 255, 255, 0.6) inset,
+        -4px 6px 8px 1px rgba(0, 0, 0, 0.4);
 }
 
 @media only screen and (max-width: 950px) {
