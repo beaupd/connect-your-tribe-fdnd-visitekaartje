@@ -60,14 +60,26 @@ frame();
 
 const aapie = async () => {
     const api = new InterfaceMember();
-    await api.fetch();
-    let data = {
-        memberId: 17,
-        nickname: "XX_GamerDutchHD_XX",
-        avatar: "https://avatars.githubusercontent.com/u/72515598?s=400&u=ea309bc2ce824f3b011f175fd0c1b32a3e47f794&v=4",
-        githubHandle: "beaupd",
-    };
-    await api.patch(data);
+    // let data = {
+    //     memberId: 17,
+    //     nickname: "XX_GamerDutchHD_XX",
+    //     avatar: "https://avatars.githubusercontent.com/u/72515598?s=400&u=ea309bc2ce824f3b011f175fd0c1b32a3e47f794&v=4",
+    //     githubHandle: "beaupd",
+    // };
+    // await api.patch(data);
+    // let data = {
+    //     squadId: 1,
+    //     type: "string",
+    //     nickname: "string",
+    //     name: "string",
+    //     prefix: "string",
+    //     surname: "string",
+    //     avatar: "string",
+    //     githubHandle: "string",
+    //     bio: "string",
+    //     url: "string",
+    // };
+    // await api.post(data);
     // console.log(api.members);
 };
 

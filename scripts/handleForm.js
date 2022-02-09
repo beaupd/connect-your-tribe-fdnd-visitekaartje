@@ -42,9 +42,17 @@ const Form = {
         else console.log("%cWrong type of form", "color: red");
         this.update();
     },
-    submit(e) {
+    async submit(e) {
         e.preventDefault();
         console.log("submitted", e);
+        const api = new InterfaceMember();
+        let data = {
+            memberId: 17,
+            nickname: "XX_GamerDutchHD_XX",
+            avatar: "https://avatars.githubusercontent.com/u/72515598?s=400&u=ea309bc2ce824f3b011f175fd0c1b32a3e47f794&v=4",
+            githubHandle: "beaupd",
+        };
+        await api.patch(data);
         if (this.type == "update") {
             // patch
         } else if (this.type == "new") {
@@ -72,12 +80,9 @@ const Form = {
                 this.data[d].onkeyup = this.validate;
             }
         }
+        // this.data.submit.disabled = true;
         this.update();
     },
 };
 
 Form.init();
-
-const submitForm = (e) => {
-    e.preventDefault();
-};

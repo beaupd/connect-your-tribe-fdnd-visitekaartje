@@ -292,7 +292,7 @@ button.standard_button:hover svg {
     align-items: center;
     flex-direction: column;
     background: var(--material);
-    padding: 120px 0;
+    padding: 60px 0;
     border-radius: calc(2 * var(--radius));
 }
 
@@ -304,9 +304,16 @@ button.standard_button:hover svg {
     width: 300px;
     padding: 10px 20px;
     margin: 5px 0;
-    border-radius: calc(0.5 * var(--radius));
+    /* border-radius: calc(0.5 * var(--radius)); */
     border: none;
     font-size: 1.2rem;
+    background:transparent;
+    
+}
+
+.input.container input:not([disabled]):not([type="submit"]),
+.input.container select {
+    box-shadow: rgba(0,0,0,0.3) 0px -4px 0px -2px inset;
 }
 
 .input.container input:focus,
@@ -316,10 +323,20 @@ button.standard_button:hover svg {
 
 .input.container input.invalid,
 .input.container select.invalid {
-    box-shadow: red 0px -4px 1px -2px inset;
+    box-shadow: red 0px -4px 0px -2px inset;
 }
 
 .input.container input.valid,
 .input.container select.valid {
-    box-shadow: green 0px -4px 1px -2px inset;
+    box-shadow: green 0px -4px 0px -2px inset;
+}
+
+.input.container input[type="submit"] {
+    background: rgba(0,0,0,1);
+    color: #fff;
+    border-radius: calc(0.5 * var(--radius));
+    padding: 15px 0;
+}
+.input.container input[type="submit"]:not([disabled]) {
+    cursor: pointer;
 }
