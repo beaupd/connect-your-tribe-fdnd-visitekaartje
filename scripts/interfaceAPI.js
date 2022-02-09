@@ -1,7 +1,7 @@
 class InterfaceMember {
     constructor() {
-        // this.url = "https://tribe.api.fdnd.nl/v1/member";
-        this.url = "http://127.0.0.1:5000/";
+        this.url = "https://tribe.api.fdnd.nl/v1/member";
+        // this.url = "http://127.0.0.1:5000/";
         this.members = [];
         // this.fetch();
         this.memberType = {
