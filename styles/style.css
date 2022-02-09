@@ -3,7 +3,7 @@
     --content: #171717;
     --background: #cccccc;
     --material-color: #c4c4c4;
-    --material: url("/assets/white_marble_horizontal.jpg");
+    --material: url("../assets/white_marble_horizontal.jpg");
     /* --material: url("/assets/brush_white.jpg"); */
     --z-offset: 5px;
     --radius: 25px;
@@ -11,12 +11,12 @@
 
 @font-face {
     font-family: worksansregular;
-    src: url("/assets/fonts/WorkSans-Regular.ttf");
+    src: url("../assets/fonts/WorkSans-Regular.ttf");
 }
 
 @font-face {
     font-family: worksansbold;
-    src: url("/assets/fonts/WorkSans-Bold.ttf");
+    src: url("../assets/fonts/WorkSans-Bold.ttf");
 }
 
 * {
@@ -44,7 +44,8 @@ body {
 }
 
 /* ############ utilities ############ */
-button.standard_button {
+button.standard_button,
+a.standard_button {
     background: none;
     border: none;
     border-radius: var(--radius);
@@ -54,7 +55,8 @@ button.standard_button {
     cursor: pointer;
 }
 
-button.standard_button:hover {
+button.standard_button:hover,
+a.standard_button:hover {
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
         rgba(155, 155, 155, 0.3) 0px 18px 36px -18px inset; */
 
@@ -64,14 +66,16 @@ button.standard_button:hover {
         rgba(55, 55, 55, 0.5) -3px -3px 6px 1px inset;
 }
 
-button.standard_button svg {
+button.standard_button svg,
+a.standard_button svg {
     transform: translate3d(0, 0, 0) scale(1);
     transition: transform 0.3s;
     stroke: var(--utilities);
     stroke-width: 2;
 }
 
-button.standard_button:hover svg {
+button.standard_button:hover svg,
+a.standard_button:hover svg {
     transform: translate3d(-1px, -1px, 0) scale(0.98);
 }
 
@@ -291,9 +295,33 @@ button.standard_button:hover svg {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
     background: var(--material);
     padding: 60px 0;
     border-radius: calc(2 * var(--radius));
+    box-shadow: 0 -20px 80px 0 rgb(255 255 255 / 60%) inset,
+        0 5px 4px 0 rgb(0 0 0 / 25%);
+}
+
+@media only screen and (max-width: 950px) {
+    #form {
+        width: 90vw;
+        flex-direction: row;
+    }
+}
+
+#successMessage {
+    display: none;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: var(--material);
+    padding: 60px 0;
+    border-radius: calc(2 * var(--radius));
+    box-shadow: 0 -20px 80px 0 rgb(255 255 255 / 60%) inset,
+        0 5px 4px 0 rgb(0 0 0 / 25%);
 }
 
 .input.container {
@@ -303,17 +331,17 @@ button.standard_button:hover svg {
 .input.container select {
     width: 300px;
     padding: 10px 20px;
-    margin: 5px 0;
+    margin: 5px 15px;
     /* border-radius: calc(0.5 * var(--radius)); */
     border: none;
     font-size: 1.2rem;
-    background:transparent;
-    
+    background: transparent;
 }
 
-.input.container input:not([disabled]):not([type="submit"]),
-.input.container select {
-    box-shadow: rgba(0,0,0,0.3) 0px -4px 0px -2px inset;
+.input.container
+    input:not([disabled]):not([type="submit"]):not(.invalid):not(.valid),
+.input.container select:not(.invalid):not(.valid) {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -4px 0px -2px inset;
 }
 
 .input.container input:focus,
@@ -321,22 +349,26 @@ button.standard_button:hover svg {
     outline: none;
 }
 
-.input.container input.invalid,
+.input.container input.invalid:not([type="submit"]),
 .input.container select.invalid {
     box-shadow: red 0px -4px 0px -2px inset;
 }
 
-.input.container input.valid,
+.input.container input.valid:not([type="submit"]),
 .input.container select.valid {
     box-shadow: green 0px -4px 0px -2px inset;
 }
 
 .input.container input[type="submit"] {
-    background: rgba(0,0,0,1);
+    background: rgba(0, 0, 0, 1);
     color: #fff;
     border-radius: calc(0.5 * var(--radius));
     padding: 15px 0;
 }
+.input.container input[type="submit"][disabled] {
+    opacity: 0.4;
+}
+
 .input.container input[type="submit"]:not([disabled]) {
     cursor: pointer;
 }

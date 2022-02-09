@@ -3,7 +3,7 @@ class InterfaceMember {
         // this.url = "https://tribe.api.fdnd.nl/v1/member";
         this.url = "http://127.0.0.1:5000/";
         this.members = [];
-        this.fetch();
+        // this.fetch();
         this.memberType = {
             memberId: 0,
             squadId: 0,
@@ -44,11 +44,11 @@ class InterfaceMember {
             })
             .catch((err) => {
                 console.log(`%c${err}`, "color: red");
+                return false;
             });
     }
 
     async patch(data) {
-        console.log("patch");
         await this.fetch();
         const memberData = await this.getUserById(data.memberId);
         // console.log(memberData);
@@ -61,21 +61,12 @@ class InterfaceMember {
                     memberData[d] = data[d];
                 }
             }
-            console.log("patching with new data", data);
             const xhr = new XMLHttpRequest();
             xhr.open("PATCH", this.url);
 
             xhr.setRequestHeader("Accept", "application/json");
             xhr.setRequestHeader("Content-Type", "application/json");
             // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    console.log(xhr.status);
-                    console.log(xhr.responseText);
-                }
-            };
-            // console.log(`Sending request `);
 
             xhr.onload = () => {
                 if (xhr.status !== 200) {
@@ -141,6 +132,7 @@ class InterfaceMember {
             };
 
             xhr.send(JSON.stringify(data));
+            return;
         }
     }
 }

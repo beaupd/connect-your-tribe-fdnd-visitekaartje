@@ -36,21 +36,22 @@ def apiRoute():
         payload = request.get_json()
         newMember = {"memberId":  total+1}
         newMember.update(payload)
+        newMember["squadId"] = int(newMember["squadId"])
         json_data["data"].append(newMember)
         writeData()
         loadData()
         return "200: Success"
     elif request.method == "PATCH":
         payload = request.get_json()
-        member_i = empty
+        member_i = False
         for i, member in enumerate(json_data["data"]):
-            if member["memberId"] == payload["memberId"]:
+
+            if int(member["memberId"]) == int(payload["memberId"]):
                 member_i = i
         if member_i:
             # print(member_i)
             for attr, value in payload.items():
                 json_data["data"][member_i][attr] = value
-
             # print(json_data["data"][member_i])
             writeData()
             loadData()

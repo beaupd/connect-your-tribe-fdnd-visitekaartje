@@ -118,10 +118,10 @@
             "url": "\r"
         },
         {
-            "memberId": 17,
-            "squadId": 1,
+            "memberId": "17",
+            "squadId": "1",
             "type": "student",
-            "nickname": "XX_GamerDutchHDHDHDH_XX",
+            "nickname": "beaupd",
             "name": "Beau",
             "prefix": "",
             "surname": "Dekker",
@@ -652,42 +652,16 @@
         },
         {
             "memberId": 58,
-            "squadId": 1,
-            "type": "string",
-            "nickname": "string",
-            "name": "string",
-            "prefix": "string",
-            "surname": "string",
-            "avatar": "string",
-            "githubHandle": "string",
-            "bio": "string",
-            "url": "string"
-        },
-        {
-            "memberId": 59,
-            "squadId": 1,
-            "type": "string",
-            "nickname": "string",
-            "name": "string",
-            "prefix": "string",
-            "surname": "string",
-            "avatar": "string",
-            "githubHandle": "string",
-            "bio": "string",
-            "url": "string"
-        },
-        {
-            "memberId": 60,
-            "squadId": 1,
-            "type": "string",
-            "nickname": "string",
-            "name": "string",
-            "prefix": "string",
-            "surname": "string",
-            "avatar": "string",
-            "githubHandle": "string",
-            "bio": "string",
-            "url": "string"
+            "squadId": 3,
+            "type": "student",
+            "nickname": "Honeybooboo",
+            "name": "honey",
+            "prefix": " ",
+            "surname": "booboo",
+            "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.maxvandaag.nl%2Fsessies%2Fthemas%2Fhuis-tuin-hobby%2Fdit-is-waarom-je-kat-zijn-gekke-5-minuten-heeft%2F&psig=AOvVaw38mEUi39XSSO6nJdd7huMH&ust=1644515029356000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDmk4OW8_UCFQAAAAAdAAAAABAO",
+            "githubHandle": " ",
+            "bio": " ",
+            "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.maxvandaag.nl%2Fsessies%2Fthemas%2Fhuis-tuin-hobby%2Fdit-is-waarom-je-kat-zijn-gekke-5-minuten-heeft%2F&psig=AOvVaw38mEUi39XSSO6nJdd7huMH&ust=1644515029356000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDmk4OW8_UCFQAAAAAdAAAAABAO"
         }
     ],
     "meta": {
