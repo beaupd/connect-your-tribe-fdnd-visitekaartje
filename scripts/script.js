@@ -1,8 +1,8 @@
 const Card = {
     offset: 0,
-    scale: 20,
+    scale: 39,
     element: document.querySelector("#card"),
-    container: document.querySelector("#mouse_overlay"),
+    container: document.body,
     posX: 0,
     posY: 0,
     mouseX: 0,
@@ -17,9 +17,13 @@ const Card = {
         this.update();
     },
     mouse(e) {
-        this.mouseX = (e.offsetX - this.container.offsetWidth / 2) / this.scale;
+        // console.log(e.clientX, e.clientY);
+        this.mouseX =
+            ((e.clientX - window.innerWidth / 2) / window.innerWidth) *
+            this.scale;
         this.mouseY =
-            (e.offsetY - this.container.offsetHeight / 2) / this.scale;
+            ((e.clientY - window.innerHeight / 2) / window.innerHeight) *
+            this.scale;
         // console.log(e.offsetX, this.posX);
         // console.log(e.offsetY, this.posY);
         // this.update();
@@ -30,7 +34,7 @@ const Card = {
         }deg) rotateX(${
             this.offset % 360 != 0 ? this.posY : -1 * this.posY
         }deg)`;
-        // console.log(this.posX, this.posY);
+        // console.log(this.element.style.transform);
     },
 };
 
@@ -42,7 +46,7 @@ document.querySelector("#turn_right").addEventListener("click", () => {
     Card.right();
 });
 
-Card.container.addEventListener("mousemove", (e) => Card.mouse(e));
+window.addEventListener("mousemove", (e) => Card.mouse(e));
 
 const frame = () => {
     if (Card.posX != Card.mouseX || Card.posY != Card.mouseY) {
@@ -53,3 +57,18 @@ const frame = () => {
     requestAnimationFrame(frame);
 };
 frame();
+
+const aapie = async () => {
+    const api = new InterfaceMember();
+    await api.fetch();
+    let data = {
+        memberId: 17,
+        nickname: "XX_GamerDutchHD_XX",
+        avatar: "https://avatars.githubusercontent.com/u/72515598?s=400&u=ea309bc2ce824f3b011f175fd0c1b32a3e47f794&v=4",
+        githubHandle: "beaupd",
+    };
+    await api.patch(data);
+    // console.log(api.members);
+};
+
+aapie();
